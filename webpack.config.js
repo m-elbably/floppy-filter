@@ -30,11 +30,8 @@ const getConfig = (name, platform, dist) => {
 
   if (platform === 'node') {
     config.externals = {
-      lodash: {
-        commonjs: 'lodash',
-        amd: 'lodash',
-        root: '_'
-      }
+      'lodash/get': 'commonjs lodash/get',
+      'lodash/set': 'commonjs lodash/set'
     };
     config.optimization = {
       minimize: false
