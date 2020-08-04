@@ -9,12 +9,9 @@
   "bugs": {
     "url": "https://github.com/m-elbably/floppy-filter/issues"
   },
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com/@m-elbably"
-  },
   "scripts": {
-    "test": "nyc --reporter=text-summary mocha -R spec test/index.spec.js",
-    "coverage": "nyc --reporter=html --reporter=text-lcov mocha -R spec test/index.spec.js | coveralls",
+    "test": "nyc --reporter=text-summary --reporter=html mocha -R spec test/index.spec.js",
+    "coverage": "nyc --reporter=text-lcov mocha -R spec test/index.spec.js | coveralls",
     "build": "webpack --progress --colors"
   },
   "dependencies": {
