@@ -304,7 +304,9 @@ The result:
         "age": 24
     }
 
-Or do the opposite and select only objects and ignore primitive properties using these filters `['*', '!*']` and the result will be:
+Or do the opposite and select only objects and ignore primitive properties using these filters `['*', '!*']` 
+
+and the result will be:
 
     {
         "address": {
