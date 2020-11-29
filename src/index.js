@@ -93,5 +93,6 @@ function filterAll(source, fields) {
 
 module.exports = {
   filterObject,
-  filterObjects
+  filterObjects,
+  filterAll
 };
