@@ -1,6 +1,6 @@
 {
   "name": "floppy-filter",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Just another library to filter JavaScript objects, based on a simple and flexible pattern with support for negation",
   "homepage": "https://github.com/m-elbably/floppy-filter#readme",
   "author": "Mohamed El-Bably (https://github.com/m-elbably)",

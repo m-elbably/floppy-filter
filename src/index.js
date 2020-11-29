@@ -83,6 +83,14 @@ function filterObjects(objects, fields) {
   return objects.map((object) => filterObject(object, fields));
 }
 
+function filterAll(source, fields) {
+  if(_.isArray(source)) {
+    return filterObjects(source, fields);
+  }
+
+  return filterObject(source, fields);
+}
+
 module.exports = {
   filterObject,
   filterObjects
