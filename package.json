@@ -1,6 +1,6 @@
 {
   "name": "floppy-filter",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Just another library to filter JavaScript objects, based on a simple and flexible pattern with support for negation",
   "homepage": "https://github.com/m-elbably/floppy-filter#readme",
   "author": "Mohamed El-Bably (https://github.com/m-elbably)",
@@ -15,7 +15,7 @@
     "build": "webpack --progress --colors"
   },
   "dependencies": {
-    "lodash": "^4.17.19"
+    "lodash": "^4.17.20"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.11.0",
