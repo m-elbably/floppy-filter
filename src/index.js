@@ -84,7 +84,7 @@ function filterObjects(objects, fields) {
 }
 
 function filterAll(source, fields) {
-  if(_.isArray(source)) {
+  if(Array.isArray(source)) {
     return filterObjects(source, fields);
   }
 
