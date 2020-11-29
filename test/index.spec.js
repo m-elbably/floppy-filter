@@ -224,6 +224,16 @@ describe('Test object filtering (negation)', () => {
       .and.not.have.own.property('address');
   });
 
+  it('Should return a new object with all properties and "address" property includes only "country"', async () => {
+    const fields = ['*', '!address.**', 'address.country'];
+    const result = filterObject(object, fields);
+
+    expect(result).to.be.an('object')
+      .and.have.own.property('address')
+      .have.own.property('country');
+    expect(Object.keys(result.address)).to.have.lengthOf(1);
+  });
+
   it('Should return a new object without "name" property in all nested levels, but not the root level (name should not be object or array)', async () => {
     const fields = ['*', '!**.name'];
     const result = filterObject(object, fields);

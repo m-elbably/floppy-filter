@@ -47,27 +47,29 @@ function filterObject(object, fields) {
   const result = {};
 
   Object.keys(flatProps).forEach((k) => {
-    let isNegated = false;
-    let matched = false;
+    let lNegated = false;
+    let lMatchedIdx = -1;
 
     if (k == null) {
       return;
     }
 
     for (let i = firstFieldIndex; i < fields.length; i += 1) {
-      isNegated = fields[i].startsWith('!');
+      const isNegated = fields[i].startsWith('!');
       const fieldPattern = !isNegated ? fields[i] : fields[i].substr(1);
-      matched = matchKey(k, fieldPattern);
+      const matched = matchKey(k, fieldPattern);
+
       if (matched) {
-        break;
+        lNegated = isNegated;
+        lMatchedIdx = i;
       }
     }
 
-    if (matched && isNegated) {
+    if (lMatchedIdx >= 0 && lNegated) {
       return;
     }
 
-    if (allAllowed || matched) {
+    if (allAllowed || lMatchedIdx >= 0) {
       _set(result, k, _get(object, k));
     }
   });
