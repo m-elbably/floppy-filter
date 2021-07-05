@@ -1,10 +1,11 @@
 {
   "name": "floppy-filter",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Just another library to filter JavaScript objects, based on a simple and flexible pattern with support for negation",
   "homepage": "https://github.com/m-elbably/floppy-filter#readme",
   "author": "Mohamed El-Bably (https://github.com/m-elbably)",
   "main": "src/index.js",
+  "types": "src/index.d.ts",
   "repository": "https://github.com/m-elbably/floppy-filter",
   "bugs": {
     "url": "https://github.com/m-elbably/floppy-filter/issues"
