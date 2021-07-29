@@ -37,7 +37,7 @@ function matchKey(string, pattern) {
 }
 
 function filterObject(object, fields) {
-  if (object == null) {
+  if (object == null || typeof object !== 'object') {
     return object;
   }
 
@@ -86,7 +86,7 @@ function filterObjects(objects, fields) {
 }
 
 function filterAll(source, fields) {
-  if(Array.isArray(source)) {
+  if (Array.isArray(source)) {
     return filterObjects(source, fields);
   }
 

@@ -306,3 +306,14 @@ describe('Test bulk objects filtering', () => {
     expect(Object.keys(result[0])).to.have.lengthOf(fields.length);
   });
 });
+
+describe('Test string filtering instead of object', () => {
+  it('Should return the same input string', async () => {
+    const input = 'Floppy Filter';
+    const fields = ['_id', 'guid'];
+    const result = filterObject(input, fields);
+
+    expect(result).to.be.a('string')
+      .and.to.be.equal(input);
+  });
+});
